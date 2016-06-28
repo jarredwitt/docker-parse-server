@@ -17,7 +17,7 @@
     "parse-server": "~2.2.13"
   },
   "scripts": {
-    "start": "nodemon --watch /parse/cloud index.js"
+    "start": "nodemon --legacy-watch /parse/cloud index.js"
   },
   "engines": {
     "node": ">=4.3"
