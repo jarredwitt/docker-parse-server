@@ -251,4 +251,5 @@ app.listen(port, function() {
 if(liveQuery) {
   console.log("Starting live query server")
   var parseLiveQueryServer = ParseServer.createLiveQueryServer(app);
+  console.log(parseLiveQueryServer);
 }
