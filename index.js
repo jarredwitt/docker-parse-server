@@ -3,6 +3,7 @@
 // ref. parse-server/bin/parse-server
 
 var express = require('express');
+var http = require('http');
 var ParseServer = require('parse-server').ParseServer;
 var links = require('docker-links').parseLinks(process.env);
 var fs = require('fs');
@@ -244,11 +245,13 @@ app.get('/', function(req, res) {
   res.status(200).send('I dream of being a web site.');
 });
 
-app.listen(port, function() {
+var httpServer = http.createServer(app);
+
+httpServer.listen(port, function() {
   console.log('docker-parse-server running on ' + serverURL + ' (:' + port + mountPath + ')');
 });
 
 if(liveQuery) {
   console.log("Starting live query server")
-  var parseLiveQueryServer = ParseServer.createLiveQueryServer(app);
+  var parseLiveQueryServer = ParseServer.createLiveQueryServer(httpServer);
 }
