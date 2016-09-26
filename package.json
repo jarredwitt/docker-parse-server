@@ -15,7 +15,8 @@
     "kerberos": "~0.0.x",
     "csv-parse": "^1.1.7",
     "parse": "~1.8.0",
-    "parse-server": "~2.2.22"
+    "parse-server": "~2.2.22",
+    "moment": "^2.15.1"
   },
   "scripts": {
     "start": "nodemon --watch /parse/cloud -L index.js"
