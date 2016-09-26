@@ -13,8 +13,9 @@
     "docker-links": "^1.0.2",
     "express": "~4.11.x",
     "kerberos": "~0.0.x",
+    "csv-parse": "^1.1.7",
     "parse": "~1.8.0",
-    "parse-server": "~2.2.21"
+    "parse-server": "~2.2.22"
   },
   "scripts": {
     "start": "nodemon --watch /parse/cloud -L index.js"
